@@ -23,7 +23,7 @@ document.querySelector(".js-go").addEventListener('click',function(){
 
  function pushToAPI(input){
 
-    var url = "http://api.giphy.com/v1/gifs/search?q=" +input+ "&api_key=dc6zaTOxFJmzC"
+    var url = "https://api.giphy.com/v1/gifs/search?q=" +input+ "&api_key=dc6zaTOxFJmzC"
     console.log(url);
   
     // AJAX Request
