@@ -1,4 +1,4 @@
-/* 1. Grab the input value */
+/* 1. Grab the input value*/
 
 
 document.querySelector(".js-go").addEventListener('click',function(){
