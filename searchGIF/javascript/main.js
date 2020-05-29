@@ -5,6 +5,10 @@ document.querySelector(".js-go").addEventListener('click',function(){
 
     var input = document.querySelector("input").value;
     pushToAPI(input);
+    document.querySelector("input").value = null;
+    var container = document.querySelector(".js-container");
+    container.innerHTML = "";
+
   
   });
   
@@ -15,6 +19,9 @@ document.querySelector(".js-go").addEventListener('click',function(){
     // if the key ENTER is pressed...
     if(e.which === 13) {
       pushToAPI(input);
+      document.querySelector("input").value = null;
+      var container = document.querySelector(".js-container");
+      container.innerHTML = "";
     }
   
   });
@@ -67,5 +74,8 @@ document.querySelector(".js-go").addEventListener('click',function(){
       container.innerHTML += "<img src=\"" + src + "\" class=\"container-image\">";
   
     });
+
+  
+    
   
   }
