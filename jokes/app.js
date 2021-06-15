@@ -3,6 +3,16 @@ let buttonJoke = document.getElementById("btn-joke");
 const joke = document.getElementById("joke");
 
 async function generateJoke() {
+  joke.innerHTML =
+    "<span style='color: #7a1651'>" +
+    " " +
+    "</span> <br />" +
+    "<span style='color: #253e9b'>" +
+    " " +
+    "</span>" +
+    '<div class="loader"></div>' +
+    "<br />";
+
   const config = {
     headers: {
       Accept: "application/json",
@@ -17,12 +27,13 @@ async function generateJoke() {
   const data = await response.json();
 
   joke.innerHTML =
+    '<div class="fade-in">' +
     "<span style='color: #7a1651'>" +
     data.setup +
     "</span> <br /> <br />" +
     "<span style='color: #253e9b'>" +
     data.punchline +
-    "</span> <br />";
+    "</span> <br /> </div>";
 }
 
 buttonJoke.addEventListener("click", generateJoke);
