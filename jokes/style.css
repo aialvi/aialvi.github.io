@@ -15,6 +15,7 @@ body {
 }
 .container {
   width: 20rem;
+  height: 21rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,4 +127,9 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
 }
